@@ -1,0 +1,24 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/add":
+    post:
+      summary: String Calculator
+      tags:
+      - Calculator
+      parameters:
+      - name: numbers
+        in: query
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Return sum
+servers:
+- url: http://{defaultHost}
+  variables:
+    defaultHost:
+      default: localhost:3000
